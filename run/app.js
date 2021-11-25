@@ -6,6 +6,9 @@ let Koa   = require('koa');
 let log   = Bento.Log;
 const app = new Koa();
 
+const cors = require('@koa/cors');
+app.use(cors());
+
 Bento._app = function *() {
   yield Bento._bootstrap();
   yield registerMiddleware();
@@ -29,5 +32,5 @@ function *startServer() {
 
   yield require('./bootstrap/modules');
 
-  app.listen(Bento.config.api.port, "127.0.0.1");
+  app.listen(Bento.config.api.port, "0.0.0.0");
 }
