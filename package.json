@@ -13,7 +13,7 @@
 
     "debug": "^2.2.0",
     "extend": ">=3.0.2",
-    "koa": "2.13.4",
+    "koa": "2.16.1",
     "koa-request": "1.0.0",
     "@koa/router": "10.1.1",
     "prettyjson": "1.1.3",
